@@ -1,1 +1,110 @@
-// $('body').hide()
+var swiper = new Swiper('.mySwiper', {
+	slidesPerView: checkScreenSize(),
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+})
+
+function checkScreenSize() {
+	if (window.matchMedia('(max-width: 576px)').matches) {
+		return 1.5
+	} else {
+		return 6 // Значение по умолчанию
+	}
+}
+
+window.addEventListener('resize', function () {
+	swiper.params.slidesPerView = checkScreenSize()
+	swiper.update()
+})
+
+const logoImage = document.querySelector('.header__logo')
+const aboutImage = document.querySelector('.about__img')
+const objectsImage = document.querySelector('.objects__img')
+const screenWidth = window.innerWidth
+
+// Проверяем ширину экрана и меняем src изображения
+if (screenWidth >= 768) {
+	logoImage.src = 'images/logo.png'
+	aboutImage.src = './images/about.jpg'
+	objectsImage.src = './images/objects.png'
+} else {
+	logoImage.src = 'images/logo1.png'
+	aboutImage.src = './images/about1.png'
+	objectsImage.src = './images/objects1.png'
+}
+
+const navList = document.querySelector('.header__nav-list')
+const navButton = document.createElement('img')
+navButton.src = 'images/icon.png'
+navButton.classList.add('menu-button')
+
+// Добавляем кнопку перед списком навигации
+navList.before(navButton)
+
+navButton.addEventListener('click', function () {
+	navList.classList.toggle('header__nav-list--visible')
+})
+
+const licencesInner = document.querySelector('.licences__inner')
+// Находим кнопки swiper-button-prev и swiper-button-next
+const prevButton = document.querySelector('.swiper-button-prev')
+const nextButton = document.querySelector('.swiper-button-next')
+
+if (screenWidth >= 768) {
+	licencesInner.addEventListener('mouseover', function () {
+		// Показываем кнопки
+		prevButton.style.display = 'flex'
+		nextButton.style.display = 'flex'
+	})
+
+	// Добавляем обработчик события при уходе курсора с блока
+	licencesInner.addEventListener('mouseleave', function () {
+		// Скрываем кнопки
+		prevButton.style.display = 'none'
+		nextButton.style.display = 'none'
+	})
+}
+// Добавляем обработчик события при наведении на бло
+
+const partnersInner = document.querySelector('.partners__inner')
+const prevButtonPartners = document.querySelector('.button-partners-prev')
+const nextButtonPartners = document.querySelector('.button-partners-next')
+// Находим кнопки swiper-button-prev и swiper-button-next
+
+if (screenWidth >= 768) {
+	partnersInner.addEventListener('mouseover', function () {
+		// Показываем кнопки
+		prevButtonPartners.style.display = 'flex'
+		nextButtonPartners.style.display = 'flex'
+	})
+
+	// Добавляем обработчик события при уходе курсора с блока
+	partnersInner.addEventListener('mouseleave', function () {
+		// Скрываем кнопки
+		prevButtonPartners.style.display = 'none'
+		nextButtonPartners.style.display = 'none'
+	})
+}
+// Добавляем обработчик события при наведении на блок
+
+const images = document.querySelectorAll('.licences__img')
+const modal = document.getElementById('myModal')
+const modalImg = document.getElementById('img01')
+
+if (screenWidth >= 768) {
+	images.forEach(function (img) {
+		img.addEventListener('click', function () {
+			modal.style.display = 'block'
+			modalImg.src = this.src
+		})
+	})
+
+	// При клике на крестик закрыть модальное окно
+	const closeBtn = document.getElementsByClassName('close')[0]
+	closeBtn.addEventListener('click', function () {
+		modal.style.display = 'none'
+	})
+}
+// При клике на фотографию показать модальное окно с изображение

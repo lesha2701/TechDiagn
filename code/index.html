@@ -25,6 +25,11 @@
 			crossorigin="anonymous"
 		/>
 
+				<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/media.css" />
 
@@ -32,8 +37,8 @@
 	</head>
 
 	<body>
-		<div class="container">
-			<header class="header">
+		<header class="header">
+			<div class="header__inner container">
 				<img class="header__logo" src="images/logo.png" alt="logo" />
 				<nav class="header__nav">
 					<ul class="header__nav-list">
@@ -41,26 +46,28 @@
 							<a class="header__nav-link" href="#about">Услуги</a>
 						</li>
 						<li class="header__nav-item">
-							<a class="header__nav-link" href="#services"
+							<a class="header__nav-link" href="#licences"
 								>Лицензии и сертификаты</a
 							>
 						</li>
 						<li class="header__nav-item">
-							<a class="header__nav-link" href="#contacts">Объекты контроля</a>
+							<a class="header__nav-link" href="#objects">Объекты контроля</a>
 						</li>
 						<li class="header__nav-item">
-							<a class="header__nav-link" href="#contacts">Опыт</a>
+							<a class="header__nav-link" href="#experience">Опыт</a>
 						</li>
 						<li class="header__nav-item">
-							<a class="header__nav-link" href="#contacts">Партнеры</a>
+							<a class="header__nav-link" href="#partners">Партнеры</a>
 						</li>
 					</ul>
 				</nav>
-			</header>
+			</div>
+		</header>
 
-			<main class="main">
-				<section class="about">
-					<img src="images/about.jpg" alt="about" />
+		<main class="main">
+			<section class="about">
+				<div class="about__inner container">
+					<img class="about__img" src="images/about.jpg" alt="about" />
 					<div class="about__text">
 						<h2 class="about__title title">О нас</h2>
 						<p class="about__desc">
@@ -71,77 +78,288 @@
 							2018 года.
 						</p>
 					</div>
-				</section>
-				<section class="provide">
-					<h2 class="provide__title title">Мы предоставляем</h2>
-					<div class="provide__content">
-						<div class="provide__top">
+				</div>
+			</section>
+			<section class="provide" id="about">
+				<div class="container">
+				<h2 class="provide__title title">Мы предоставляем</h2>
+				<div class="provide__content">
+					<div class="provide__top">
+						<div class="provide__item">
+							<h3 class="provide__item-title">Экспертиза и диагностика</h3>
+							<ul class="provide__item-list">
+								<li class="provide__item-desc">
+									Экспертиза промышленной безопасности (ЭПБ) технических
+									устройств, зданий и сооружений, документации на техническое
+									перевооружение.
+								</li>
+								<li class="provide__item-desc">
+									Техническое диагностирование (ТД) технических устройств,
+									зданий и сооружений, грузоподъемных механизмов.
+								</li>
+								<li class="provide__item-desc">
+									Техническое освидетельствование (ТО) технических устройств,
+									трубопроводов пара и горячей воды, ревизия технологических
+									трубопроводов.
+								</li>
+								<li class="provide__item-desc">
+									Паспортизация технических устройств, зданий и сооружений,
+									грузоподъемных механизмов.
+								</li>
+							</ul>
+						</div>
+						<div class="provide__wrap">
 							<div class="provide__item">
-								<h3 class="provide__item-title">Экспертиза и диагностика</h3>
+								<h3 class="provide__item-title">
+									Коррозионные обследования и защита
+								</h3>
 								<ul class="provide__item-list">
 									<li class="provide__item-desc">
-										Экспертиза промышленной безопасности (ЭПБ) технических
-										устройств, зданий и сооружений, документации на техническое
-										перевооружение.
+										Коррозионное обследование подземных стальных газопроводов,
+										нефтепроводов, водопроводов, тепловых сетей,
+										канализационных систем.
 									</li>
 									<li class="provide__item-desc">
-										Техническое диагностирование (ТД) технических устройств,
-										зданий и сооружений, грузоподъемных механизмов.
-									</li>
-									<li class="provide__item-desc">
-										Техническое освидетельствование (ТО) технических устройств,
-										трубопроводов пара и горячей воды, ревизия технологических
-										трубопроводов.
-									</li>
-									<li class="provide__item-desc">
-										Паспортизация технических устройств, зданий и сооружений,
-										грузоподъемных механизмов.
+										Проверка эффективности и пуско-наладка систем
+										электрохимической защиты от коррозии.
 									</li>
 								</ul>
 							</div>
-							<div class="provide__wrap">
-								<div class="provide__item">
-									<h3>Коррозионные обследования и защита</h3>
-									<ul class="provide__item-list">
-										<li class="provide__item-desc">
-											Коррозионное обследование подземных стальных газопроводов,
-											нефтепроводов, водопроводов, тепловых сетей,
-											канализационных систем.
-										</li>
-										<li class="provide__item-desc">
-											Проверка эффективности и пуско-наладка систем
-											электрохимической защиты от коррозии.
-										</li>
-									</ul>
-								</div>
-								<div class="provide__item">
-									<h3>Обследование зданий и конструкций</h3>
-									<ul class="provide__item-list">
-										<li class="provide__item-desc">
-											Предпроектное обследование зданий (ППО), сопровождение в
-											прохождении Главгосэкспертизы.
-										</li>
-										<li class="provide__item-desc">
-											Тепловизионное обследование зданий, ангаров, строительных
-											конструкций.
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="provide__bottom">
 							<div class="provide__item">
-								<h3 class="provide__item-title">Дополнительные услуги"></h3>
+								<h3 class="provide__item-title">
+									Обследование зданий и конструкций
+								</h3>
 								<ul class="provide__item-list">
 									<li class="provide__item-desc">
-										Тарировка и ревизия предохранительных клапанов.
+										Предпроектное обследование зданий (ППО), сопровождение в
+										прохождении Главгосэкспертизы.
+									</li>
+									<li class="provide__item-desc">
+										Тепловизионное обследование зданий, ангаров, строительных
+										конструкций.
 									</li>
 								</ul>
 							</div>
 						</div>
 					</div>
-				</section>
-			</main>
-		</div>
+					<div class="provide__bottom">
+						<div class="provide__item">
+							<h3 class="provide__item-title">Дополнительные услуги</h3>
+							<ul class="provide__item-list">
+								<li class="provide__item-desc">
+									Тарировка и ревизия предохранительных клапанов.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				</div>
+			</section>
+			<section class="licences" id="licences">
+				<div class="licences__inner container">
+					<h2 class="licences__title title">Лицензии и сертификаты</h2>
+					<div class="swiper-container mySwiper">
+						<div id="myModal" class="modal">
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+						</div>
+						<div class="licences__content swiper-wrapper">
+							<div class="licences__item swiper-slide">
+								<img
+									class="licences__img"
+									src="images/licences/1.png"
+									alt="licences"
+								/>
+							</div>
+							<div class="licences__item swiper-slide">
+								<img
+									class="licences__img"
+									src="images/licences/2.png"
+									alt="licences"
+								/>
+							</div>
+							<div class="licences__item swiper-slide">
+								<img
+									class="licences__img"
+									src="images/licences/3.png"
+									alt="licences"
+								/>
+							</div>
+							<div class="licences__item swiper-slide">
+								<img
+									class="licences__img"
+									src="images/licences/4.png"
+									alt="licences"
+								/>
+							</div>
+							<div class="licences__item swiper-slide">
+								<img
+									class="licences__img"
+									src="images/licences/5.png"
+									alt="licences"
+								/>
+							</div>
+							<div class="licences__item swiper-slide">
+								<img
+									class="licences__img"
+									src="images/licences/6.png"
+									alt="licences"
+								/>
+							</div>
+							<div class="licences__item swiper-slide">
+								<img
+									class="licences__img"
+									src="images/licences/7.png"
+									alt="licences"
+								/>
+							</div>
+							<div class="licences__item swiper-slide">
+								<img
+									class="licences__img"
+									src="images/licences/8.png"
+									alt="licences"
+								/>
+							</div>
+						</div>
+						<div class="swiper-button-prev"></div>
+  						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+			</section>
+			<section class="objects" id="objects">
+				<div class="objects__inner container">
+					<img class="objects__img" src="./images/objects.png" alt="objects" />
+					<div class="objects__content">
+						<h3 class="objects__title">Специалисты <span>ООО «ТЭК-Диагностика»</span> имеют большой опыт в проведении ЭПБ, ТД, ТО и ППО следующих объектов:</h3>
+						<ul class="objects__list">
+							<li class="objects__item">Надземные и подземные стальные трубопроводы</li>
+							<li class="objects__item">Оборудование нефтегазокомпрессорных станций</li>
+							<li class="objects__item">Резервуары, газгольдеры</li>
+							<li class="objects__item">Трубопроводы пара, горячей и холодной воды, канализационные трубы</li>
+							<li class="objects__item">Паровые и водогрейные котлы, экономайзеры, теплообменники</li>
+							<li class="objects__item">Оборудование, работающее под избыточным давлением</li>
+							<li class="objects__item">Запорно-регулирующая арматура, конденсатосборники, гидрозатворы</li>
+							<li class="objects__item">Газорегуляторные пункты, шкафы, установки</li>
+							<li class="objects__item">Здания, дымовые трубы, эстакады</li>
+							<li class="objects__item">Технологические трубопроводы производственных площадок</li>
+							<li class="objects__item">Насосно-компрессорное оборудование, фонтанные арматуры</li>
+							<li class="objects__item">Грузоподъемные машины и механизмы</li>
+					</div>
+				</div>
+			</section>
+			<section class="experience" id="experience">
+				<div class="experience__inner container">
+					<h2 class="experience__title title">Опыт работы</h2>
+					<div class="experience__items">
+						<div class="experience__items-big experience__items-block">
+							<p class="experience__items-desc">За 6 лет специалистами <span>ООО «ТЭК-ДИАГНОСТИКА»</span> успешно выполнены работы по техническому диагностированию и экспертизе промышленной безопасности</p>
+						</div>
+						<ul class="experience__items-small experience__items-block">
+							<li class="experience__item">
+								4700 км подземных стальных трубопроводов
+							</li>
+							<li class="experience__item">
+								350 км надземных стальных трубопроводов
+							</li>
+							<li class="experience__item">
+								3800 ГРП, ШРП, ГРУ
+							</li>	
+							<li class="experience__item">
+								750 км нефте и продуктопроводов
+							</li>
+							<li class="experience__item">
+								﻿Более 3000 единиц ТУ на объектах теплоэнергетики
+							</li>
+							<li class="experience__item">
+								200 км трубопроводов тепловых сетей
+
+							</li>
+							<li class="experience__item">
+								Более 200 зданий котельных, ГРП и других объектов капитального строительства
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="partners" id="partners">
+				<div class="container partners__inner">
+					<h2 class="partners__title title">Партнёры</h2>
+					<div class="swiper-container mySwiper">
+						<div class="swiper-wrapper partners__items">
+							<div class="swiper-slide partners__item">
+								<img class="partners__img-gaz" src="images/partners/1.png" alt="partners" />
+							</div>
+							<div class="swiper-slide partners__item">
+								<img src="images/partners/2.png" alt="partners" />
+							</div>
+							<div class="swiper-slide partners__item">
+								<img src="images/partners/3.png" alt="partners" />
+							</div>
+							<div class="swiper-slide partners__item">
+								<img src="images/partners/4.png" alt="partners" />
+							</div>
+							<div class="swiper-slide partners__item">
+								<img src="images/partners/5.png" alt="partners" />
+							</div>
+							<div class="swiper-slide partners__item">
+								<img src="images/partners/6.png" alt="partners" />
+							</div>
+							<div class="swiper-slide partners__item">
+								<img src="images/partners/7.png" alt="partners" />
+							</div>
+							<div class="swiper-slide partners__item">
+								<img src="images/partners/8.png" alt="partners" />
+							</div>
+							<div class="swiper-slide partners__item">
+								<img class="partners__img-gaz" src="images/partners/9.png" alt="partners" />
+							</div>
+						</div>
+						<div class="swiper-button-prev button-partners-prev"></div>
+  						<div class="swiper-button-next button-partners-next"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container footer__inner">
+				<div class="footer__info">
+					<div class="footer__logo">
+						<img src="images/logo1.png" alt="logo" />
+					</div>
+					<div class="footer__text">
+						<ul class="footer__list">
+							<li class="footer__item footer__item-address ">
+								<p class="footer__item-title">Юридический адрес</p>
+								<p class="footer__item-desc">141980, Московская область, г. Дубна, ул. Промышленная, д. 10, стр. 2, помещение 100
+								</p>
+							</li>
+							<li class="footer__item footer__item-contact">
+								<p class="footer__item-title">Контакты</p>
+								<ul class="footer__item-list">
+									<li>+7 (495) 790-02-44</li>
+									<li>tek-diagnostika@yandex.ru</li>
+									<li>www.тэк-диагностика.рф</li>
+								</ul>
+							</li>
+							<li class="footer__item footer__item-bank">
+								<p class="footer__item-title">Банковские реквизиты</p>
+								<ul class="footer__item-list">
+									<li>ИНН 5010054808 КПП 501001001 ОГРН 1185007005787</li>
+									<li>Расчётный счёт №40702810400000000017 в Филиал «Центральный» Банка ВТБ (ПАО) в г. Москве</li>
+									<li>Корреспондентский счёт 30101810145250000411</li>
+									<li>БИК 044525411</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__copyright">
+					<p class="footer__copyright-text">
+						© 2024 Тэк-диагностика.рф
+					</p>
+				</div>
+			</div>
+		</footer>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	</body>
 </html>
