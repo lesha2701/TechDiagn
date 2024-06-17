@@ -9,6 +9,10 @@ var swiper = new Swiper('.mySwiper', {
 function checkScreenSize() {
 	if (window.matchMedia('(max-width: 576px)').matches) {
 		return 1.5
+	} else if (window.matchMedia('(max-width: 769px)').matches) {
+		return 4
+	} else if (window.matchMedia('(max-width: 1200px)').matches) {
+		return 5
 	} else {
 		return 6 // Значение по умолчанию
 	}
@@ -25,7 +29,7 @@ const objectsImage = document.querySelector('.objects__img')
 const screenWidth = window.innerWidth
 
 // Проверяем ширину экрана и меняем src изображения
-if (screenWidth >= 768) {
+if (screenWidth > 768) {
 	logoImage.src = 'images/logo.png'
 	aboutImage.src = './images/about.jpg'
 	objectsImage.src = './images/objects.png'
@@ -108,3 +112,17 @@ if (screenWidth >= 768) {
 	})
 }
 // При клике на фотографию показать модальное окно с изображение
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault()
+
+		const target = document.querySelector(this.getAttribute('href'))
+		const offset = 180 // Вы можете настроить этот параметр согласно вашим предпочтениям
+
+		window.scrollTo({
+			top: target.offsetTop - offset,
+			behavior: 'smooth',
+		})
+	})
+})
