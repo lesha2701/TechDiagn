@@ -8,8 +8,10 @@ var swiper = new Swiper('.mySwiper', {
 
 function checkScreenSize() {
 	if (window.matchMedia('(max-width: 576px)').matches) {
-		return 1.5
+		return 1.6
 	} else if (window.matchMedia('(max-width: 769px)').matches) {
+		return 3.5
+	} else if (window.matchMedia('(max-width: 1000px)').matches) {
 		return 4
 	} else if (window.matchMedia('(max-width: 1200px)').matches) {
 		return 5
@@ -28,18 +30,23 @@ const aboutImage = document.querySelector('.about__img')
 const objectsImage = document.querySelector('.objects__img')
 const screenWidth = window.innerWidth
 
+if (screenWidth > 940) {
+	logoImage.src = 'images/logo.png'
+} else {
+	logoImage.src = 'images/logo1.png'
+}
+
 // Проверяем ширину экрана и меняем src изображения
 if (screenWidth > 768) {
-	logoImage.src = 'images/logo.png'
 	aboutImage.src = './images/about.jpg'
 	objectsImage.src = './images/objects.png'
 } else {
-	logoImage.src = 'images/logo1.png'
 	aboutImage.src = './images/about1.png'
 	objectsImage.src = './images/objects1.png'
 }
 
 const navList = document.querySelector('.header__nav-list')
+const navItems = document.querySelectorAll('.header__nav-item')
 const navButton = document.createElement('img')
 navButton.src = 'images/icon.png'
 navButton.classList.add('menu-button')
@@ -49,6 +56,12 @@ navList.before(navButton)
 
 navButton.addEventListener('click', function () {
 	navList.classList.toggle('header__nav-list--visible')
+})
+
+navItems.forEach(function (item) {
+	item.addEventListener('click', function () {
+		navList.classList.remove('header__nav-list--visible')
+	})
 })
 
 const licencesInner = document.querySelector('.licences__inner')
