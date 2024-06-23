@@ -345,6 +345,10 @@ body {
   line-height: 21px;
   margin-bottom: 8px;
 }
+.footer__item-link {
+  color: #000;
+  text-decoration: none;
+}
 .footer__item-address {
   width: 350px;
 }
